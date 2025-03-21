@@ -1,0 +1,176 @@
+﻿<Page x:Class="UP.Pages.Main"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:UP.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="800" d:DesignWidth="1200"
+      Title="Main">
+
+    <Grid Background="White">
+        
+        <Grid.Resources>
+            <ResourceDictionary Source="/Resource/Dictionary.xaml"/>
+        </Grid.Resources>
+        <Grid VerticalAlignment="Top" Height="52">
+            
+            <Grid.Effect>
+                <DropShadowEffect BlurRadius="31" Direction="260" Color="#0060AC" ShadowDepth="0"/>
+            </Grid.Effect>
+            <Border CornerRadius="00,00,00,00" Margin="0,0,0,0">
+                <Border.Background>
+                    <SolidColorBrush Color="#9EA1A2" Opacity="1.0"/>
+                </Border.Background>
+
+            </Border>
+            
+            <!--<Image Source="/Images/street.png" Margin="19,8,0,0" HorizontalAlignment="Left" Width="41" Height="42" VerticalAlignment="Top"/>-->
+            <Label x:Name="WhoAmI" Content="" Margin="0,10,10,0" HorizontalAlignment="Right" Height="38" VerticalAlignment="Top" Foreground="#3DAEFF" FontSize="20" FontFamily="Yu Gothic UI Semibold" VerticalContentAlignment="Center"/>
+        </Grid>
+        <Grid Margin="10,57,10,0" Height="65" VerticalAlignment="Top" Cursor="">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="751*"/>
+                <ColumnDefinition Width="430*"/>
+            </Grid.ColumnDefinitions>
+            
+            <ScrollViewer Grid.Row="0" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Hidden" Grid.ColumnSpan="2" >
+                <StackPanel x:Name="list_move" Orientation="Horizontal" Cursor="">
+                    <Border x:Name="rooms_itms" Margin="5,3,10,0" Height="45" CornerRadius="5,5,5,5" Style="{StaticResource Grid_Itm_Anim}" MouseDown="Click_Rooms" Padding="7,7,7,7" Cursor="Hand">
+                        <Grid Height="30">
+                            <Image Source="/Images/rooms.png" Margin="5,0,0,0" HorizontalAlignment="Left" Width="29" Height="30" VerticalAlignment="Top"/>
+                            <Label Content="Комнаты" Margin="44,0,0,0" Foreground="White" FontSize="15" FontFamily="Corbel" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" FontWeight="Bold"/>
+                        </Grid>
+                    </Border>
+                    <Border x:Name="SocialScholarships_itms" Margin="5,3,0,0" Height="45" CornerRadius="5,5,5,5" Style="{StaticResource Grid_Itm_Anim}" MouseDown="Click_SocialScholarships" Padding="7,7,7,7" Cursor="Hand">
+                        <Grid Height="30">
+                            <Image Source="/Images/stipend.png" Margin="5,0,0,0" HorizontalAlignment="Left" Width="29" Height="30" VerticalAlignment="Top"/>
+                            <Label Content="Стипендии" Margin="44,0,0,0" Foreground="#FFFFFFFF" FontSize="15" FontFamily="Corbel" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Height="30"  VerticalAlignment="Top" FontWeight="Bold"/>
+                        </Grid>
+                    </Border>
+                    <Border x:Name="GroupRisk_itms" Margin="15,3,0,0" Height="45" CornerRadius="5,5,5,5" Style="{StaticResource Grid_Itm_Anim}" MouseDown="Click_Statuses_RiskGroup" Padding="7,7,7,7" Cursor="Hand">
+                        <Grid Height="30">
+                            <Image Source="/Images/risk.png" Margin="5,0,0,0" HorizontalAlignment="Left" Width="29" Height="30" VerticalAlignment="Top"/>
+                            <Label Content="Группа риска" Margin="44,0,0,0" Foreground="#FFFFFFFF" FontSize="15" FontFamily="Corbel" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Height="30"  VerticalAlignment="Top" FontWeight="Bold"/>
+                        </Grid>
+                    </Border>
+                    <Border x:Name="Invalid_itms" Margin="15,3,0,0" Height="45" CornerRadius="5,5,5,5" Style="{StaticResource Grid_Itm_Anim}" MouseDown="Click_Statuses_Invalid" Padding="7,7,7,7" Cursor="Hand">
+                        <Grid Height="30">
+                            <Image Source="/Images/invalid.png" Margin="5,0,0,0" HorizontalAlignment="Left" Width="29" Height="30" VerticalAlignment="Top"/>
+                            <Label Content="Инвалиды" Margin="44,0,0,0" Foreground="#FFFFFFFF" FontSize="15" FontFamily="Corbel" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Height="30"  VerticalAlignment="Top" FontWeight="Bold"/>
+                        </Grid>
+                    </Border>
+                    <Border x:Name="SPPP_itms" Margin="15,3,0,0" Height="45" CornerRadius="5,5,5,5" Style="{StaticResource Grid_Itm_Anim}" MouseDown="Click_SPPP_Meetings" Padding="7,7,7,7" Cursor="Hand">
+                        <Grid Height="30">
+                            <Image Source="/Images/SPPP.png" Margin="5,0,0,0" HorizontalAlignment="Left" Width="29" Height="30" VerticalAlignment="Top"/>
+                            <Label Content="СППП" Margin="44,0,0,0" Foreground="#FFFFFFFF" FontSize="15" FontFamily="Corbel" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Height="30"  VerticalAlignment="Top" FontWeight="Bold"/>
+                        </Grid>
+                    </Border>
+                    <Border x:Name="Students_itms" Margin="15,3,0,0" Height="45" CornerRadius="5,5,5,5" Style="{StaticResource Grid_Itm_Anim}" MouseDown="Click_Students" Padding="7,7,7,7" Cursor="Hand">
+                        <Grid Height="30">
+                            <Image Source="/Images/students.png" Margin="5,0,0,0" HorizontalAlignment="Left" Width="29" Height="30" VerticalAlignment="Top"/>
+                            <Label Content="Студенты" Margin="44,0,0,0" Foreground="#FFFFFFFF" FontSize="15" FontFamily="Corbel" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Height="30"  VerticalAlignment="Top" FontWeight="Bold"/>
+                        </Grid>
+                    </Border>
+                    <Border x:Name="Zavedenia_itms" Margin="15,3,0,0" Height="45" CornerRadius="5,5,5,5" Style="{StaticResource Grid_Itm_Anim}" MouseDown="Click_Departments" Padding="7,7,7,7" Cursor="Hand">
+                        <Grid Height="30">
+                            <Image Source="/Images/uchzav.png" Margin="5,0,0,0" HorizontalAlignment="Left" Width="29" Height="30" VerticalAlignment="Top"/>
+                            <Label Content="Отделения" Margin="44,0,0,0" Foreground="#FFFFFFFF" FontSize="15" FontFamily="Corbel" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Height="30"  VerticalAlignment="Top" FontWeight="Bold"/>
+                        </Grid>
+                    </Border>
+                    <Border x:Name="Obshaga_itms" Margin="15,3,0,0" Height="45" CornerRadius="5,5,5,5" Style="{StaticResource Grid_Itm_Anim}" MouseDown="Click_Obshaga" Padding="7,7,7,7" Cursor="Hand">
+                        <Grid Height="30">
+                            <Image Source="/Images/obshaga.png" Margin="5,0,0,0" HorizontalAlignment="Left" Width="29" Height="30" VerticalAlignment="Top"/>
+                            <Label Content="Общежития" Margin="44,0,0,0" Foreground="#FFFFFFFF" FontSize="15" FontFamily="Corbel" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Height="30"  VerticalAlignment="Top" FontWeight="Bold"/>
+                        </Grid>
+                    </Border>
+                    <Border x:Name="OVZ_itms" Margin="15,3,0,0" Height="45" CornerRadius="5,5,5,5" Style="{StaticResource Grid_Itm_Anim}" MouseDown="Click_Statuses_OVZ" Padding="7,7,7,7" Cursor="Hand">
+                        <Grid Height="30">
+                            <Image Source="/Images/OVZ.jpg" Margin="5,0,0,0" HorizontalAlignment="Left" Width="29" Height="30" VerticalAlignment="Top"/>
+                            <Label Content="ОВЗ" Margin="44,0,0,0" Foreground="#FFFFFFFF" FontSize="15" FontFamily="Corbel" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Height="30"  VerticalAlignment="Top" FontWeight="Bold"/>
+                        </Grid>
+                    </Border>
+                    <Border x:Name="SVO_itms" Margin="15,3,0,0" Height="45" CornerRadius="5,5,5,5" Style="{StaticResource Grid_Itm_Anim}" MouseDown="Click_Statuses_SVO" Padding="7,7,7,7" Cursor="Hand">
+                        <Grid Height="30">
+                            <Image Source="/Images/SVO.png" Margin="5,0,0,0" HorizontalAlignment="Left" Width="29" Height="30" VerticalAlignment="Top"/>
+                            <Label Content="СВО" Margin="44,0,0,0" Foreground="#FFFFFFFF" FontSize="15" FontFamily="Corbel" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Height="30"  VerticalAlignment="Top" FontWeight="Bold"/>
+                        </Grid>
+                    </Border>
+                    <Border x:Name="Sirots_itms" Margin="15,3,0,0" Height="45" CornerRadius="5,5,5,5" Style="{StaticResource Grid_Itm_Anim}" MouseDown="Click_Statuses_Sirots" Padding="7,7,7,7" Cursor="Hand">
+                        <Grid Height="30">
+                            <Image Source="/Images/Sirots.png" Margin="5,0,0,0" HorizontalAlignment="Left" Width="29" Height="30" VerticalAlignment="Top"/>
+                            <Label Content="Сироты" Margin="44,0,0,0" Foreground="#FFFFFFFF" FontSize="15" FontFamily="Corbel" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Height="30"  VerticalAlignment="Top" FontWeight="Bold"/>
+                        </Grid>
+                    </Border>
+
+                    <Border Margin="15,3,0,0" Height="45" CornerRadius="5,5,5,5" Style="{StaticResource Grid_Itm_Anim}" Background="AliceBlue" MouseDown="Click_Export" Padding="7,7,7,7" Cursor="Hand">
+                        <Grid Height="30">
+                            <Image Source="/Images/Export.png" Margin="5,0,0,0" HorizontalAlignment="Left" Width="29" Height="30" VerticalAlignment="Top"/>
+                            <Label Content="Экспорт" Margin="44,0,0,0" Foreground="#FF2C2C2C" FontSize="15" FontFamily="Corbel" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" FontWeight="Bold"/>
+                        </Grid>
+                    </Border>
+                    <Border Margin="15,3,0,0" Height="45" CornerRadius="5,5,5,5" Style="{StaticResource Grid_Itm_Anim}" Background="#FFE48F2B" MouseDown="Click_Back" Padding="7,7,7,7" Cursor="Hand">
+                        <Grid Height="30">
+                            <Image Source="/Images/back.png" Margin="5,0,0,0" HorizontalAlignment="Left" Width="29" Height="30" VerticalAlignment="Top"/>
+                            <Label Content="Назад" Margin="44,0,0,0" Foreground="#FF2C2C2C" FontSize="15" FontFamily="Corbel" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" FontWeight="Bold"/>
+                        </Grid>
+                    </Border>
+                </StackPanel>
+            </ScrollViewer>
+        </Grid>
+        <StackPanel Margin="116,102,117,553" Background="White" x:Name="filterpanel">
+            <StackPanel Orientation="Horizontal" Margin="0,5,0,5">
+                <Label Content="Дата фильтрации:" Margin="5"/>
+                <DatePicker x:Name="FilterDateDatePicker" SelectedDateChanged="Filter_SelectionChanged" Margin="0,0,5,0"/>
+
+                <Label Content="Фамилия:" Margin="5"/>
+                <TextBox x:Name="FilterLastNameTextBox" TextChanged="FilterTextBox_TextChanged" Width="100" Margin="0,0,5,0"/>
+
+                <Label Content="Группа:" Margin="5"/>
+                <TextBox x:Name="FilterGroupTextBox" TextChanged="FilterTextBox_TextChanged" Width="100" Margin="0,0,5,0"/>
+            </StackPanel>
+
+            <!-- Статус фильтры -->
+            <StackPanel Orientation="Horizontal" Margin="0,5,0,5">
+                <CheckBox x:Name="FilterSPPPCheckBox" Content="СППП" Margin="5" Checked="Filter_SelectionChanged" Unchecked="Filter_SelectionChanged"/>
+                <CheckBox x:Name="FilterVzyskCheckBox" Content="Взыскания" Margin="5" Checked="Filter_SelectionChanged" Unchecked="Filter_SelectionChanged"/>
+                <CheckBox x:Name="FilterSirotsCheckBox" Content="Сироты" Margin="5" Checked="Filter_SelectionChanged" Unchecked="Filter_SelectionChanged"/>
+                <CheckBox x:Name="FilterInvalidCheckBox" Content="Инвалиды" Margin="5" Checked="Filter_SelectionChanged" Unchecked="Filter_SelectionChanged"/>
+                <CheckBox x:Name="FilterOVZCheckBox" Content="ОВЗ" Margin="5" Checked="Filter_SelectionChanged" Unchecked="Filter_SelectionChanged"/>
+                <CheckBox x:Name="FilterSVOCheckBox" Content="СВО" Margin="5" Checked="Filter_SelectionChanged" Unchecked="Filter_SelectionChanged"/>
+                <CheckBox x:Name="FilterSocialCheckBox" Content="Стипендия" Margin="5" Checked="Filter_SelectionChanged" Unchecked="Filter_SelectionChanged"/>
+                <CheckBox x:Name="FilterRiskCheckBox" Content="Группа риска" Margin="5" Checked="Filter_SelectionChanged" Unchecked="Filter_SelectionChanged"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,5,0,5">
+                <Label Content="Пол:" Margin="5"/>
+                <ComboBox x:Name="FilterGenderComboBox" Margin="5" SelectionChanged="Filter_SelectionChanged">
+                    <ComboBoxItem Content="Любой"/>
+                    <ComboBoxItem Content="Мужской"/>
+                    <ComboBoxItem Content="Женский"/>
+                </ComboBox>
+                <CheckBox x:Name="FilterSovershenCheckBox" Content="Совершеннолетние" Margin="5" Checked="Filter_SelectionChanged" Unchecked="Filter_SelectionChanged"/>
+                <CheckBox x:Name="FilterOtchizBox" Content="Отчисленные" Margin="5" Checked="Filter_SelectionChanged" Unchecked="Filter_SelectionChanged"/>
+                <Label Content="Комната:" Margin="5"/>
+                <TextBox x:Name="FilterRoomTextBox" TextChanged="FilterTextBox_TextChanged" Width="100" Margin="0,0,5,0"/>
+                <Label Content="Год поступления:" Margin="5"/>
+                <TextBox x:Name="FilterPostupDatePicker" Margin="0,0,5,0" Width="88"/>
+                <Label Content="Год отчисления:" Margin="5"/>
+                <TextBox x:Name="FilterOtchisDatePicker"  Margin="0,0,5,0" Width="78"/>
+            </StackPanel>
+        </StackPanel>
+        <Border Margin="10,247,10,10" CornerRadius="15,15,15,15">
+            <Border.Background>
+                <SolidColorBrush Color="#0060AC" Opacity="1.0"/>
+            </Border.Background>
+            <Grid MinHeight="457">
+                
+                <ScrollViewer x:Name="scroll_main">
+
+                    <StackPanel x:Name="parrent"/>
+
+                </ScrollViewer>
+                <Frame x:Name="frame_main" NavigationUIVisibility="Hidden" Visibility="Hidden" Opacity="0"/>
+            </Grid>
+        </Border>
+    </Grid>
+</Page>

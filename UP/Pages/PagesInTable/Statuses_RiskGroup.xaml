@@ -1,0 +1,59 @@
+﻿<Page x:Class="UP.Pages.PagesInTable.Statuses_RiskGroup"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:UP.Pages.PagesInTable"
+      mc:Ignorable="d" 
+      d:DesignHeight="750" d:DesignWidth="950"
+            Title="RiskGroup">
+
+    <Border CornerRadius="10,0,0,10">
+        <Border.Background>
+            <SolidColorBrush Color="#0060AC" Opacity="1.0"/>
+        </Border.Background>
+        <Grid>
+            <Grid.Resources>
+                <ResourceDictionary Source="/Resource/Dictionary.xaml"/>
+            </Grid.Resources>
+            <ScrollViewer>
+                <Border MinHeight="600" Height="965">
+                    <Grid>
+                        <Label Content="Студент" Margin="39,95,26,0" Foreground="White" FontSize="15" FontFamily="Yu Gothic UI Semilight" HorizontalContentAlignment="Left" Height="29" VerticalAlignment="Top"/>
+                        <ComboBox x:Name="student" Height="35" Background="#FFDEDEDE" Margin="40,129,193,0" VerticalAlignment="Top"/>
+                        <Label Content="Группа риска/СОП" Margin="39,28,26,0" Foreground="White" FontSize="30" FontFamily="Yu Gothic UI Semibold" HorizontalContentAlignment="Left" Height="52" VerticalAlignment="Top"/>
+                        <Label Content="тип (группа риска/СОП)" Margin="39,175,26,0" Foreground="White" FontSize="15" FontFamily="Yu Gothic UI Semilight" HorizontalContentAlignment="Left" Height="29" VerticalAlignment="Top"/>
+                        <TextBox x:Name="tip" Style="{StaticResource BaseBox}" Height="35" Background="#FFDEDEDE" Margin="40,220,193,0" VerticalAlignment="Top"/>
+                        <Label Content="Основание поставки на учет" Margin="39,390,26,0" Foreground="White" FontSize="15" FontFamily="Yu Gothic UI Semilight" HorizontalContentAlignment="Left" Height="29" VerticalAlignment="Top"/>
+                        <TextBox x:Name="osnUch" Style="{StaticResource BaseBox}" Height="35" Background="#FFDEDEDE" Margin="40,435,193,0" VerticalAlignment="Top"/>
+                        <Label Content="Основание снятия с учета" Margin="40,475,25,0" Foreground="White" FontSize="15" FontFamily="Yu Gothic UI Semilight" HorizontalContentAlignment="Left" Height="29" VerticalAlignment="Top"/>
+                        <TextBox x:Name="osnSnatUch" Style="{StaticResource BaseBox}" Height="35" Background="#FFDEDEDE" Margin="40,509,193,0" VerticalAlignment="Top"/>
+                        <Label Content="Причина поставки на учёт" Margin="40,549,25,0" Foreground="White" FontSize="15" FontFamily="Yu Gothic UI Semilight" HorizontalContentAlignment="Left" Height="29" VerticalAlignment="Top"/>
+                        <TextBox x:Name="prichUch" Style="{StaticResource BaseBox}" Height="35" Background="#FFDEDEDE" Margin="40,583,193,0" VerticalAlignment="Top"/>
+                        <Label Content="Дата поставки на учет" Margin="40,260,25,0" Foreground="White" FontSize="15" FontFamily="Yu Gothic UI Semilight" HorizontalContentAlignment="Left" Height="29" VerticalAlignment="Top"/>
+                        <DatePicker Style="{StaticResource styleDatepicker}" x:Name="nachUch" Text="Наименование" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="40,294,0,0" RenderTransformOrigin="0.783,1.923" Height="28" Width="138" PreviewTextInput="TextBox_Data"/>
+                        <Label Content="Дата снятия с учета" Margin="40,324,25,0" Foreground="White" FontSize="15" FontFamily="Yu Gothic UI Semilight" HorizontalContentAlignment="Left" Height="29" VerticalAlignment="Top"/>
+                        <DatePicker Style="{StaticResource styleDatepicker}" x:Name="konUch" Text="Наименование" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="40,358,0,0" RenderTransformOrigin="0.783,1.923" Height="28" Width="138" PreviewTextInput="TextBox_Data"/>
+                        <Label Content="Причина снятия с учёта" Margin="39,623,26,0" Foreground="White" FontSize="15" FontFamily="Yu Gothic UI Semilight" HorizontalContentAlignment="Left" Height="29" VerticalAlignment="Top"/>
+                        <TextBox x:Name="prichSnUch" Style="{StaticResource BaseBox}" Height="35" Background="#FFDEDEDE" Margin="40,657,193,0" VerticalAlignment="Top"/>
+                        <Label Content="Примечание" Margin="40,697,25,0" Foreground="White" FontSize="15" FontFamily="Yu Gothic UI Semilight" HorizontalContentAlignment="Left" Height="29" VerticalAlignment="Top"/>
+                        <TextBox x:Name="primech" Style="{StaticResource BaseBox}" Height="35" Background="#FFDEDEDE" Margin="40,731,193,0" VerticalAlignment="Top"/>
+                        <TextBox x:Name="FilePathTextBox" IsReadOnly="True" Margin="30,801,202,129"/>
+                        <Button Content="Выбрать файл" Click="SelectFileButton_Click" Margin="642,801,202,129"/>
+
+                        <Button Style="{StaticResource BtnRedac}" Margin="0,0,136.2,24" VerticalAlignment="Bottom" Height="40" Width="105" Click="Click_Statuses_RiskGroup_Redact" HorizontalAlignment="Right">
+                            <Image Source="/Images/redac.png" Width="20" Height="20"/>
+                        </Button>
+                        <Button x:Name="btn_cancel"  Style="{StaticResource BtnRedac}" Background="#FFE48F2B" Margin="0,0,26.2,24" VerticalAlignment="Bottom" Height="40" Width="105" Click="Click_Cancel_Statuses_RiskGroup_Redact" HorizontalAlignment="Right">
+                            <Image Source="/Images/backs.png" Width="20" Height="20"/>
+                        </Button>
+                        <Button x:Name="btn_remove" Style="{StaticResource BtnRedac}" Background="#FFE42B2B" Margin="30,0,0,23.6" VerticalAlignment="Bottom" Height="40" Width="105" Click="Click_Remove_Statuses_RiskGroup_Redact" HorizontalAlignment="Left">
+                            <Image Source="/Images/del.png" Width="20" Height="20"/>
+                        </Button>
+                    </Grid>
+                </Border>
+            </ScrollViewer>
+        </Grid>
+    </Border>
+</Page>
+

@@ -1,0 +1,61 @@
+﻿<Page x:Class="UP.Pages.PagesInTable.SPPP_Meetings"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:UP.Pages.PagesInTable"
+       mc:Ignorable="d" 
+      d:DesignHeight="750" d:DesignWidth="950"
+            Title="ceh">
+
+    <Border CornerRadius="10,0,0,10">
+        <Border.Background>
+            <SolidColorBrush Color="#0060AC" Opacity="1.0"/>
+        </Border.Background>
+        <Grid>
+            <Grid.Resources>
+                <ResourceDictionary Source="/Resource/Dictionary.xaml"/>
+            </Grid.Resources>
+            <ScrollViewer>
+                <Border MinHeight="600">
+                    <Grid Height="885">
+                        <Label Content="Студент" Margin="39,95,26,0" Foreground="White" FontSize="15" FontFamily="Yu Gothic UI Semilight" HorizontalContentAlignment="Left" Height="29" VerticalAlignment="Top"/>
+                        <ComboBox x:Name="student"  Height="35" Background="#FFDEDEDE" Margin="40,129,193,0" VerticalAlignment="Top"/>
+                        <Label Content="СППП" Margin="39,28,26,0" Foreground="White" FontSize="30" FontFamily="Yu Gothic UI Semibold" HorizontalContentAlignment="Left" Height="52" VerticalAlignment="Top"/>
+                        <Label Content="Дата" Margin="39,175,26,0" Foreground="White" FontSize="15" FontFamily="Yu Gothic UI Semilight" HorizontalContentAlignment="Left" Height="29" VerticalAlignment="Top"/>
+                        <DatePicker Style="{StaticResource styleDatepicker}" x:Name="RentStart" Text="Наименование" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="39,209,0,0" RenderTransformOrigin="0.783,1.923" Height="25" Width="138" PreviewTextInput="TextBox_Data"/>
+                        <Label Content="Основание вызова" Margin="39,239,26,0" Foreground="White" FontSize="15" FontFamily="Yu Gothic UI Semilight" HorizontalContentAlignment="Left" Height="29" VerticalAlignment="Top"/>
+                        <TextBox x:Name="osnVizov" Style="{StaticResource BaseBox}" Height="35" Background="#FFDEDEDE" Margin="39,273,194,0" VerticalAlignment="Top"/>
+                        <Label Content="Присутствовали сотрудники" Margin="40,313,25,0" Foreground="White" FontSize="15" FontFamily="Yu Gothic UI Semilight" HorizontalContentAlignment="Left" Height="29" VerticalAlignment="Top"/>
+                        <ComboBox x:Name="sotrud" Height="35" Background="#FFDEDEDE" Margin="40,347,193,0" VerticalAlignment="Top">
+                            <ComboBoxItem>Yes</ComboBoxItem>
+                            <ComboBoxItem>No</ComboBoxItem>
+                        </ComboBox>
+                        <Label Content="Присутствовали представители" Margin="40,387,25,0" Foreground="White" FontSize="15" FontFamily="Yu Gothic UI Semilight" HorizontalContentAlignment="Left" Height="29" VerticalAlignment="Top"/>
+                        <ComboBox x:Name="predstav" Height="35" Background="#FFDEDEDE" Margin="40,421,193,0" VerticalAlignment="Top">
+                            <ComboBoxItem>Yes</ComboBoxItem>
+                            <ComboBoxItem>No</ComboBoxItem>
+                        </ComboBox>
+                        <Label Content="Причина вызова" Margin="40,461,25,0" Foreground="White" FontSize="15" FontFamily="Yu Gothic UI Semilight" HorizontalContentAlignment="Left" Height="29" VerticalAlignment="Top"/>
+                        <TextBox x:Name="prichVizov" Style="{StaticResource BaseBox}" Height="35" Background="#FFDEDEDE" Margin="40,495,193,0" VerticalAlignment="Top"/>
+                        <Label Content="Решение" Margin="40,535,25,0" Foreground="White" FontSize="15" FontFamily="Yu Gothic UI Semilight" HorizontalContentAlignment="Left" Height="29" VerticalAlignment="Top"/>
+                        <TextBox x:Name="resh" Style="{StaticResource BaseBox}" Height="35" Background="#FFDEDEDE" Margin="40,569,193,0" VerticalAlignment="Top"/>
+                        <Label Content="Примечание" Margin="40,609,25,0" Foreground="White" FontSize="15" FontFamily="Yu Gothic UI Semilight" HorizontalContentAlignment="Left" Height="29" VerticalAlignment="Top"/>
+                        <TextBox x:Name="primech" Style="{StaticResource BaseBox}" Height="35" Background="#FFDEDEDE" Margin="40,643,193,0" VerticalAlignment="Top"/>
+                        <TextBox x:Name="FilePathTextBox" IsReadOnly="True" Margin="38,712,194,137"/>
+                        <Button Content="Выбрать файл" Click="SelectFileButton_Click" Margin="650,712,195,137"/>
+                        <Button Style="{StaticResource BtnRedac}" Margin="0,0,136.2,24" VerticalAlignment="Bottom" Height="40" Width="105" Click="Click_SPPP_Meetings_Redact" HorizontalAlignment="Right">
+                            <Image Source="/Images/redac.png" Width="20" Height="20"/>
+                        </Button>
+                        <Button x:Name="btn_cancel"  Style="{StaticResource BtnRedac}" Background="#FFE48F2B" Margin="0,0,26.2,24" VerticalAlignment="Bottom" Height="40" Width="105" Click="Click_Cancel_SPPP_Meetings_Redact" HorizontalAlignment="Right">
+                            <Image Source="/Images/backs.png" Width="20" Height="20"/>
+                        </Button>
+                        <Button x:Name="btn_remove" Style="{StaticResource BtnRedac}" Background="#FFE42B2B" Margin="30,0,0,23.6" VerticalAlignment="Bottom" Height="40" Width="105" Click="Click_Remove_SPPP_Meetings_Redact" HorizontalAlignment="Left">
+                            <Image Source="/Images/del.png" Width="20" Height="20"/>
+                        </Button>
+                    </Grid>
+                </Border>
+            </ScrollViewer>
+        </Grid>
+    </Border>
+</Page>

@@ -1,0 +1,79 @@
+﻿<Page x:Class="UP.Pages.PagesInTable.Students"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:UP.Pages.PagesInTable"
+      mc:Ignorable="d" 
+      d:DesignHeight="750" d:DesignWidth="950"
+            Title="ceh">
+
+    <Border CornerRadius="10,0,0,10" Margin="0,0,0,0">
+        <Border.Background>
+            <SolidColorBrush Color="#0060AC" Opacity="1.0"/>
+        </Border.Background>
+        <Grid>
+            <Grid.Resources>
+                <ResourceDictionary Source="/Resource/Dictionary.xaml"/>
+            </Grid.Resources>
+            <ScrollViewer>
+                <Border>
+                    <Grid Height="1586">
+                        <Label Content="Студенты" Margin="39,28,26,0" Foreground="White" FontSize="30" FontFamily="Yu Gothic UI Semibold" HorizontalContentAlignment="Left" Height="52" VerticalAlignment="Top"/>
+                        <Label Content="Фамилия" Margin="40,166,25,0" Foreground="White" FontSize="15" FontFamily="Yu Gothic UI Semilight" HorizontalContentAlignment="Left" Height="29" VerticalAlignment="Top"/>
+                        <TextBox x:Name="Family" Style="{StaticResource BaseBox}" Height="35" Background="#FFDEDEDE" Margin="40,200,193,0" VerticalAlignment="Top" LostFocus="TextBox_LostFocus_1" GotFocus="TextBox_GotFocus_1" PreviewTextInput="TextBox_PreviewTextInput_1"/>
+                        <Label Content="Имя" Margin="39,239,26,0" Foreground="White" FontSize="15" FontFamily="Yu Gothic UI Semilight" HorizontalContentAlignment="Left" Height="29" VerticalAlignment="Top"/>
+                        <TextBox x:Name="Name" Style="{StaticResource BaseBox}" Height="35" Background="#FFDEDEDE" Margin="40,273,193,0" VerticalAlignment="Top" LostFocus="TextBox_LostFocus_2" GotFocus="TextBox_GotFocus_2" PreviewTextInput="TextBox_PreviewTextInput_1"/>
+                        <Label Content="Отчество" Margin="40,313,25,0" Foreground="White" FontSize="15" FontFamily="Yu Gothic UI Semilight" HorizontalContentAlignment="Left" Height="29" VerticalAlignment="Top"/>
+                        <TextBox x:Name="octh" Style="{StaticResource BaseBox}" Height="35" Background="#FFDEDEDE" Margin="40,347,193,0" VerticalAlignment="Top" LostFocus="TextBox_LostFocus_3" GotFocus="TextBox_GotFocus_3" PreviewTextInput="TextBox_PreviewTextInput_1"/>
+                        <Label Content="Дата рождения" Margin="40,387,25,0" Foreground="White" FontSize="15" FontFamily="Yu Gothic UI Semilight" HorizontalContentAlignment="Left" Height="29" VerticalAlignment="Top"/>
+                        <DatePicker Style="{StaticResource styleDatepicker}" x:Name="dateBrth" Width="138" Height="28" Background="#FFDEDEDE" Margin="40,421,755,0" VerticalAlignment="Top" HorizontalContentAlignment="Left" PreviewTextInput="TextBox_Data"/>
+                        <Label Content="Пол" Margin="40,461,25,0" Foreground="White" FontSize="15" FontFamily="Yu Gothic UI Semilight" HorizontalContentAlignment="Left" Height="29" VerticalAlignment="Top"/>
+                        <ComboBox x:Name="pol" Height="35" Background="#FFDEDEDE" Margin="40,495,193,0" VerticalAlignment="Top">
+                            <ComboBoxItem>Male</ComboBoxItem>
+                            <ComboBoxItem>Female</ComboBoxItem>
+                        </ComboBox>
+                        <Label Content="Контактный номер" Margin="40,535,25,0" Foreground="White" FontSize="15" FontFamily="Yu Gothic UI Semilight" HorizontalContentAlignment="Left" Height="29" VerticalAlignment="Top"/>
+                        <TextBox x:Name="kontNomer" Style="{StaticResource BaseBox}" Height="35" Background="#FFDEDEDE" Margin="40,569,193,0" VerticalAlignment="Top" GotFocus="TextBox_GotFocus_1"/>
+                        <Label Content="Образование" Margin="40,609,25,0" Foreground="White" FontSize="15" FontFamily="Yu Gothic UI Semilight" HorizontalContentAlignment="Left" Height="29" VerticalAlignment="Top"/>
+                        <TextBox x:Name="obraz" Style="{StaticResource BaseBox}" Height="35" Background="#FFDEDEDE" Margin="40,643,193,0" VerticalAlignment="Top"/>
+                        <Label Content="Отделение" Margin="40,683,25,0" Foreground="White" FontSize="15" FontFamily="Yu Gothic UI Semilight" HorizontalContentAlignment="Left" Height="29" VerticalAlignment="Top"/>
+                        <ComboBox x:Name="otdel" Height="35" Background="#FFDEDEDE" Margin="40,722,193,0" VerticalAlignment="Top"/>
+                        <Label Content="Группа" Margin="40,757,25,0" Foreground="White" FontSize="15" FontFamily="Yu Gothic UI Semilight" HorizontalContentAlignment="Left" Height="29" VerticalAlignment="Top"/>
+                        <TextBox x:Name="group" Style="{StaticResource BaseBox}" Height="35" Background="#FFDEDEDE" Margin="40,791,193,0" VerticalAlignment="Top"/>
+                        <Label Content="Финансирование" Margin="40,831,25,0" Foreground="White" FontSize="15" FontFamily="Yu Gothic UI Semilight" HorizontalContentAlignment="Left" Height="29" VerticalAlignment="Top"/>
+                        <ComboBox x:Name="finance" Height="35" Background="#FFDEDEDE" Margin="40,865,193,0" VerticalAlignment="Top">
+                            <ComboBoxItem Content="Budget"/>
+                            <ComboBoxItem Content="VneBudget"/>
+                        </ComboBox>
+                        <Label Content="Год поступления" Margin="40,905,25,0" Foreground="White" FontSize="15" FontFamily="Yu Gothic UI Semilight" HorizontalContentAlignment="Left" Height="29" VerticalAlignment="Top"/>
+                        <TextBox x:Name="godPostup" Style="{StaticResource BaseBox}" Height="35" Background="#FFDEDEDE" Margin="40,939,193,0" VerticalAlignment="Top" LostFocus="TextBox_LostFocus_3" PreviewTextInput="TextBox_Data1"/>
+                        <Label Content="Год окончания" Margin="40,979,25,0" Foreground="White" FontSize="15" FontFamily="Yu Gothic UI Semilight" HorizontalContentAlignment="Left" Height="29" VerticalAlignment="Top"/>
+                        <TextBox x:Name="godOkonch" Style="{StaticResource BaseBox}" Height="35" Background="#FFDEDEDE" Margin="40,1013,193,0" VerticalAlignment="Top" LostFocus="TextBox_LostFocus_3" PreviewTextInput="TextBox_Data1"/>
+                        <Label Content="Информация об отчислении" Margin="40,1053,25,0" Foreground="White" FontSize="15" FontFamily="Yu Gothic UI Semilight" HorizontalContentAlignment="Left" Height="29" VerticalAlignment="Top"/>
+                        <TextBox x:Name="infoOtchis" Style="{StaticResource BaseBox}" Height="35" Background="#FFDEDEDE" Margin="40,1082,193,0" VerticalAlignment="Top"/>
+                        <Label Content="Дата отчисления" Margin="40,1122,25,0" Foreground="White" FontSize="15" FontFamily="Yu Gothic UI Semilight" HorizontalContentAlignment="Left" Height="29" VerticalAlignment="Top"/>
+                        <DatePicker x:Name="dateOtchiz" Text="Наименование" Style="{StaticResource styleDatepicker}" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="40,1151,0,0" RenderTransformOrigin="0.783,1.923" Height="25" Width="700" PreviewTextInput="TextBox_Data"/>
+                        <Label Content="Примечание" Margin="40,1181,25,0" Foreground="White" FontSize="15" FontFamily="Yu Gothic UI Semilight" HorizontalContentAlignment="Left" Height="29" VerticalAlignment="Top"/>
+                        <TextBox x:Name="primech" Style="{StaticResource BaseBox}" Height="35" Background="#FFDEDEDE" Margin="39,1215,194,0" VerticalAlignment="Top"/>
+                        <Label Content="Сведения о родителях" Margin="40,1255,25,0" Foreground="White" FontSize="15" FontFamily="Yu Gothic UI Semilight" HorizontalContentAlignment="Left" Height="29" VerticalAlignment="Top"/>
+                        <TextBox x:Name="svORodit" Style="{StaticResource BaseBox}" Height="35" Background="#FFDEDEDE" Margin="40,1289,193,0" VerticalAlignment="Top"/>
+                        <Label Content="Взыскание" Margin="40,1329,25,0" Foreground="White" FontSize="15" FontFamily="Yu Gothic UI Semilight" HorizontalContentAlignment="Left" Height="29" VerticalAlignment="Top"/>
+                        <TextBox x:Name="vziskanie" Style="{StaticResource BaseBox}" Height="35" Background="#FFDEDEDE" Margin="40,1363,193,0" VerticalAlignment="Top"/>
+                        <TextBox x:Name="FilePathTextBox" IsReadOnly="True" Margin="40,1436,194,116"/>
+                        <Button Content="Выбрать файл" Click="SelectFileButton_Click" Margin="651,1436,193,116"/>
+                        <Button Style="{StaticResource BtnRedac}" Margin="0,0,136.2,24" VerticalAlignment="Bottom" Height="40" Width="105" Click="Click_Students_Redact" HorizontalAlignment="Right">
+                            <Image Source="/Images/redac.png" Width="20" Height="20"/>
+                        </Button>
+                        <Button x:Name="btn_cancel"  Style="{StaticResource BtnRedac}" Background="#FFE48F2B" Margin="0,0,26.2,24" VerticalAlignment="Bottom" Height="40" Width="105" Click="Click_Cancel_Students_Redact" HorizontalAlignment="Right">
+                            <Image Source="/Images/backs.png" Width="20" Height="20"/>
+                        </Button>
+                        <Button x:Name="btn_remove" Style="{StaticResource BtnRedac}" Background="#FFE42B2B" Margin="30,0,0,23.6" VerticalAlignment="Bottom" Height="40" Width="105" Click="Click_Remove_Students_Redact" HorizontalAlignment="Left">
+                            <Image Source="/Images/del.png" Width="20" Height="20"/>
+                        </Button>
+                    </Grid>
+                </Border>
+            </ScrollViewer>
+        </Grid>
+    </Border>
+</Page>

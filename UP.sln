@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.35425.106
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UP", "UP\UP.csproj", "{F889EEE8-DE35-4BBC-B0AA-8365D0E7597B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassConnection", "ClassConnection\ClassConnection.csproj", "{E5C6E620-D6F5-484A-B9E5-F90162C48434}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassModules", "ClassModules\ClassModules.csproj", "{FEFF3672-B167-4CB0-ACD1-C532E9D9FC90}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F889EEE8-DE35-4BBC-B0AA-8365D0E7597B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F889EEE8-DE35-4BBC-B0AA-8365D0E7597B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F889EEE8-DE35-4BBC-B0AA-8365D0E7597B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F889EEE8-DE35-4BBC-B0AA-8365D0E7597B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5C6E620-D6F5-484A-B9E5-F90162C48434}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5C6E620-D6F5-484A-B9E5-F90162C48434}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5C6E620-D6F5-484A-B9E5-F90162C48434}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5C6E620-D6F5-484A-B9E5-F90162C48434}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEFF3672-B167-4CB0-ACD1-C532E9D9FC90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEFF3672-B167-4CB0-ACD1-C532E9D9FC90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEFF3672-B167-4CB0-ACD1-C532E9D9FC90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEFF3672-B167-4CB0-ACD1-C532E9D9FC90}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9BAA3E12-8561-4A80-9FAD-63C26F009354}
+	EndGlobalSection
+EndGlobal
